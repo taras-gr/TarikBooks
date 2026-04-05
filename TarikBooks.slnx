@@ -1,0 +1,9 @@
+<Solution>
+  <Folder Name="/source/">
+    <Project Path="TarikBooks.Api/TarikBooks.Api.csproj" />
+    <Project Path="TarikBooks.Application/TarikBooks.Application.csproj" Id="adfbebb9-6933-4b60-a8d4-ac536326c265" />
+    <Project Path="TarikBooks.Dal/TarikBooks.Dal.csproj" />
+    <Project Path="TarikBooks.Domain/TarikBooks.Domain.csproj" />
+  </Folder>
+  <Folder Name="/tests/" />
+</Solution>
