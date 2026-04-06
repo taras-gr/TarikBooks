@@ -2,6 +2,7 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using TarikBooks.Dal;
 
@@ -10,9 +11,11 @@ using TarikBooks.Dal;
 namespace TarikBooks.Dal.Migrations
 {
     [DbContext(typeof(TarikBooksDbContext))]
-    partial class TarikBooksDbContextModelSnapshot : ModelSnapshot
+    [Migration("20260406070353_AddedBaseEntitiesStructure")]
+    partial class AddedBaseEntitiesStructure
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
