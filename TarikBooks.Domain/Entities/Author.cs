@@ -11,4 +11,6 @@ public class Author
     public int CountryId { get; set; }
 
     public required Country Country { get; set; }
+
+    public ICollection<Book> Books { get; set; } = [];
 }

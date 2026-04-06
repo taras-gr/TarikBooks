@@ -18,5 +18,10 @@ internal class BookEntityTypeConfiguration : IEntityTypeConfiguration<Book>
             .WithMany()
             .HasForeignKey(e => e.LanguageId)
             .IsRequired();
+
+        builder.HasOne(b => b.Author)
+            .WithMany(a => a.Books)
+            .HasForeignKey(e => e.AuthorId)
+            .IsRequired();
     }
 }

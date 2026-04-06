@@ -9,4 +9,8 @@ public class Book
     public int LanguageId { get; set; }
 
     public required Language Language { get; set; }
+
+    public int AuthorId { get; set; }
+
+    public required Author Author { get; set; }
 }
