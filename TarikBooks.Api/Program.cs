@@ -9,7 +9,7 @@ builder.Services.AddControllers();
 
 builder.Services.AddDalServices(builder.Configuration);
 
-builder.Services.AddApplicationServices();
+builder.Services.AddApplicationServices(builder.Configuration);
 
 var app = builder.Build();
 
