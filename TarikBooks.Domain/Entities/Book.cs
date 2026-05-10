@@ -4,13 +4,13 @@ public class Book
 {
     public int Id { get; set; }
 
-    public required string Title { get; set; }
+    public string Title { get; set; } = string.Empty;
 
     public int LanguageId { get; set; }
 
-    public required Language Language { get; set; }
+    public Language? Language { get; set; }
 
     public int AuthorId { get; set; }
 
-    public required Author Author { get; set; }
+    public Author? Author { get; set; }
 }

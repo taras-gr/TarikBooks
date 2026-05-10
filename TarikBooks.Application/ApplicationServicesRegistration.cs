@@ -12,6 +12,11 @@ public static class ApplicationServicesRegistration
             cfg.RegisterServicesFromAssembly(typeof(ApplicationServicesRegistration).Assembly);
         });
 
+        services.AddAutoMapper(cfg => {
+            cfg.LicenseKey = configuration["LicenseKeys:AutoMapperLicenseKey"];
+            cfg.AddMaps(typeof(ApplicationServicesRegistration).Assembly);
+        });
+
         return services;
     }
 }

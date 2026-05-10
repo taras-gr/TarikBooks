@@ -10,4 +10,19 @@ public class BookRepository(TarikBooksDbContext dbContext) : IBookRepository
     {
         return await dbContext.Books.ToListAsync();
     }
+
+    public async Task<Book?> GetBookById(int id)
+    {
+        return await dbContext.Books.FirstOrDefaultAsync(s => s.Id == id);
+    }
+
+    public void AddBook(Book bookToAdd)
+    {
+        dbContext.Books.Add(bookToAdd);
+    }
+
+    public async Task<bool> SaveChangesAsync()
+    {
+        return await dbContext.SaveChangesAsync() > 0;
+    }
 }

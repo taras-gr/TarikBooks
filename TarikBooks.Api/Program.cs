@@ -1,5 +1,5 @@
-using TarikBooks.Dal;
 using TarikBooks.Application;
+using TarikBooks.Dal;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -14,8 +14,6 @@ builder.Services.AddApplicationServices(builder.Configuration);
 var app = builder.Build();
 
 app.UseHttpsRedirection();
-
-app.UseAuthorization();
 
 app.MapControllers();
 
